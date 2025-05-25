@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Développeur Full Stack innovant avec expertise en React, Spring Boot et solutions web performantes. Découvrez mon portfolio professionnel." />
+  <title>Dilan Idealisaina | Développeur Full Stack Créatif</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Times New Roman", serif;
+      background-color: #252a34;
+      color: #fff;
+      margin: 0;
+      padding-top: 70px;
+    }
+
+    /* HEADER FIXE AVEC MENU */
+    header {
+      background-color: #16213e;
+      color: #fff;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #0f4b5c;
+      border-radius: 4px;
+    }
+
+    /* SECTION HOME */
+    section#home {
+      padding: 80px 40px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .home-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .home-text {
+      flex: 1 1 55%;
+      animation: slideInLeft 1s ease-out;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #ff2e63;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .value-proposition {
+      background-color: #1e1e2f;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 25px 0;
+      border-left: 4px solid #08d9d6;
+    }
+
+    .value-proposition h3 {
+      color: #08d9d6;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 15px;
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff2e63;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: #08d9d6;
+    }
+
+    .home-image {
+      flex: 1 1 40%;
+      text-align: center;
+      animation: slideInRight 1s ease-out;
+    }
+
+    .home-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transition: transform 0.5s ease;
+    }
+
+    .home-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff2e63;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: #e61e50;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 46, 99, 0.4);
+    }
+
+    /* Bouton CV spécifique */
+    .cta-button.cv-download {
+      background-color: #1db954;
+      margin-top: 15px;
+    }
+    .cta-button.cv-download:hover {
+      background-color: #17a44d;
+      box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #08d9d6;
+      color: #252a34;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideInLeft {
+      0% { transform: translateX(-50px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+      0% { transform: translateX(50px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin-left: 0;
+      }
+
+      .home-layout {
+        flex-direction: column;
+      }
+
+      .home-text, .home-image {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      .home-image img {
+        margin-top: 30px;
+      }
+
+      .stats {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Portfolio Professionnel</h1>
+      <nav>
+        <ul>
+          <li><a href="accueil.html">ACCEUIL</a></li>
+          <li><a href="a-propos.html">A PROPOS</a></li>
+          <li><a href="projets.html">PROJETS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home">
+    <div class="container home-layout">
+      <div class="home-text">
+        <h2>Solutions digitales sur mésure par un développeur passionné</h2>
+        <p>
+          Développeur Full Stack avec 3 ans d'expérience, je crée des applications web performantes qui allient élégance visuelle et robustesse technique. Mon approche centrée sur l'utilisateur et mon souci du détail font de moi un partenaire idéal pour concrétiser vos projets digitaux.
+        </p>
+
+        <div class="value-proposition">
+          <h3>Pourquoi collaborer avec moi ?</h3>
+          <p>
+            Je ne me contente pas de coder - je conçois des expériences utilisateur fluides et des architectures back-end optimisées. Chaque projet est l'occasion de repousser les limites techniques tout en respectant les délais et budgets.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Projets réalisés</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction client</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Technologies maîtrisées</div>
+          </div>
+        </div>
+
+        <p>
+          Spécialiste des technologies modernes (React, Spring Boot, Express.js), je m'adapte rapidement aux nouveaux défis et j'apporte des solutions innovantes aux problèmes complexes. Mon portfolio témoigne de ma capacité à livrer des produits finis de haute qualité.
+        </p>
+      </div>
+
+      <div class="home-image">
+        <img src="images/20240808_171631.jpg" alt="Dilan Idealisaina - Développeur Full Stack" />
+        <div style="margin-top: 20px;">
+          <a href="projets.html" class="cta-button">Voir mes réalisations</a>
+          <a href="contact.html" class="cta-button" style="background-color: #08d9d6; margin-left: 15px;">Discutons de votre projet</a>
+          <br />
+          <a href="images/CV Professionnel Comptable Minimaliste Bleu_3.pdf" class="cta-button cv-download" download>Télécharger mon CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Dilan Idealisaina Razoarimendrika | Développeur Full Stack Innovant</p>
+  </footer>
+</body>
+</html>

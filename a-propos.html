@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Développeur Full Stack spécialisé en solutions industrielles et logicielles sur mesure. Expertise en automatisation et gestion de données pour entreprises.">
+  <title>Dilan Idealisaina | Compétences Techniques pour Entreprises</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Times New Roman", serif;
+      background-color: #252a34;
+      color: #fff;
+      margin: 0;
+      padding-top: 70px;
+    }
+
+    /* HEADER FIXE AVEC MENU */
+    header {
+      background-color: #16213e;
+      color: #fff;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #0f4b5c;
+      border-radius: 4px;
+    }
+
+    /* SECTION ABOUT */
+    section#about {
+      padding: 40px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #ff2e63;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+
+    h3 {
+      color: #08d9d6;
+      margin: 20px 0 15px 0;
+      font-size: 24px;
+      border-bottom: 2px solid #08d9d6;
+      padding-bottom: 8px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      animation: slideInUp 1s ease-out;
+    }
+
+    .about-column {
+      background-color: #1e1e2f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .about-column:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    }
+
+    p, ul {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .skills-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .skills-list li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .skills-list li:before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #08d9d6;
+    }
+
+    .value-box {
+      background-color: #0f4b5c;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .value-box h4 {
+      color: #ff2e63;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff2e63;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .cta-button:hover {
+      background-color: #e61e50;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 46, 99, 0.4);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #08d9d6;
+      color: #252a34;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideInUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin-left: 0;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Portfolio professionnel</h1>
+      <nav>
+        <ul>
+          <li><a href="accueil.html">ACCEUIL</a></li>
+          <li><a href="a-propos.html">A PROPOS</a></li>
+          <li><a href="projets.html">PROJETS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>Expertise technique au service des entreprises</h2>
+      <div class="about-content">
+        <div class="about-column">
+          <h3>Profil Professionnel</h3>
+          <p><strong>Nom :</strong> Dilan Idealisaina Razoarimendrika</p>
+          <p><strong>Formation :</strong> École de Management et d'Innovation Technologique (E.M.I.T)</p>
+          <p><strong>Spécialisation :</strong> Développement d'Applications Intranet/Internet</p>
+          
+          <div class="value-box">
+            <h4>Ce que j'apporte à votre entreprise :</h4>
+            <p>Développement de solutions sur mesure pour optimiser vos processus industriels et administratifs. Création d'interfaces intuitives et de systèmes backend robustes pour améliorer votre productivité.</p>
+          </div>
+
+          <h3>Domaines d'Intervention</h3>
+          <ul class="skills-list">
+            <li>Automatisation des processus métiers</li>
+            <li>Gestion de stocks et inventaires</li>
+            <li>Solutions de suivi de production</li>
+            <li>Tableaux de bord analytiques</li>
+            <li>Intégration de systèmes existants</li>
+          </ul>
+        </div>
+
+        <div class="about-column">
+          <h3>Compétences Techniques</h3>
+          <ul class="skills-list">
+            <li><strong>Frontend :</strong> React.js, Vue.js, HTML5, CSS3, Tailwind</li>
+            <li><strong>Backend :</strong> Spring Boot, Express.js, PHP, Java EE</li>
+            <li><strong>Bases de données :</strong> MySQL, PostgreSQL, Optimisation SQL</li>
+            <li><strong>Outils :</strong> Git, Docker, CI/CD, Tests unitaires</li>
+            <li><strong>Spécifiques :</strong> API REST, Sécurité, Architecture logicielle</li>
+          </ul>
+
+          <h3>Atouts pour les Industries</h3>
+          <ul class="skills-list">
+            <li>Développement d'applications de gestion industrielle</li>
+            <li>Création de logiciels métiers sur mesure</li>
+            <li>Intégration de systèmes de monitoring</li>
+            <li>Solutions pour l'industrie 4.0</li>
+            <li>Maintenance évolutive des applications</li>
+          </ul>
+
+          <a href="projets.html" class="cta-button">Voir mes projets industriels</a>
+          <a href="contact.html" class="cta-button" style="background-color: #08d9d6; margin-left: 15px;">Besoin d'une solution ?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Dilan Idealisaina Razoarimendrika | Solutions Digitales pour l'Industrie</p>
+  </footer>
+</body>
+</html>

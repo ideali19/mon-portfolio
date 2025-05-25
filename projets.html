@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mes Projets</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Times New Roman", serif;
+      background-color: #252a34;
+      color: #fff;
+      margin: 0;
+      padding-top: 70px; /* pour éviter que le menu fixe cache le contenu */
+    }
+
+    /* HEADER FIXE AVEC MENU */
+    header {
+      background-color: #16213e;
+      color: #fff;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #0f4b5c;
+      border-radius: 4px;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    h2 {
+      color: #ff2e63;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .carousel-container {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .carousel-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #08d9d6;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 12px;
+      background-color: #1e1e2f;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel-buttons {
+      margin-top: 10px;
+    }
+
+    .carousel-buttons button {
+      background-color: #ff2e63;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      font-size: 16px;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-buttons button:hover {
+      background-color: #e61e50;
+    }
+
+    footer {
+      background-color: #08d9d6;
+      color: #252a34;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu en haut -->
+  <header>
+    <div class="container">
+      <h1>Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="accueil.html">ACCEUIL</a></li>
+          <li><a href="a-propos.html">À PROPOS</a></li>
+          <li><a href="projets.html">PROJETS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <h2>petite extrait des projets réalisé</h2>
+
+    <div class="grid-container">
+
+      <!-- Formation -->
+      <div class="carousel-container">
+        <div class="carousel-title">Formation (React Js et Spring-Boot) </div>
+        <div class="carousel" id="carousel-formation">
+          <img src="images/formation/formation1.png" id="img-formation" alt="Formation">
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="prevImage('formation')">◀</button>
+          <button onclick="nextImage('formation')">▶</button>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="carousel-container">
+        <div class="carousel-title">Location (React Js et Express Js) </div>
+        <div class="carousel" id="carousel-location">
+          <img src="images/gestion_location/loc1.png" id="img-location" alt="Location">
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="prevImage('location')">◀</button>
+          <button onclick="nextImage('location')">▶</button>
+        </div>
+      </div>
+
+      <!-- Livre -->
+      <div class="carousel-container">
+        <div class="carousel-title">Livre (React Js et Laravel) </div>
+        <div class="carousel" id="carousel-livre">
+          <img src="images/livre/livre1.png" id="img-livre" alt="Livre">
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="prevImage('livre')">◀</button>
+          <button onclick="nextImage('livre')">▶</button>
+        </div>
+      </div>
+
+      <!-- Réservation -->
+      <div class="carousel-container">
+        <div class="carousel-title">Réservation (React Js et Spring-Boot) </div>
+        <div class="carousel" id="carousel-reservation">
+          <img src="images/gestion_reservation/reservation1.png" id="img-reservation" alt="Réservation">
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="prevImage('reservation')">◀</button>
+          <button onclick="nextImage('reservation')">▶</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Mes Projets Développés</p>
+  </footer>
+
+  <script>
+    const imagePaths = {
+      formation: [
+        "images/formation/formation1.png",
+        "images/formation/formation2.png",
+        "images/formation/formation3.png",
+        "images/formation/formation4.png",
+        "images/formation/formation5.png",
+        "images/formation/formation6.png"
+      ],
+      location: [
+        "images/gestion_location/loc1.png",
+        "images/gestion_location/loc2.png",
+        "images/gestion_location/loc3.png",
+        "images/gestion_location/loc4.png",
+        "images/gestion_location/loc5.png"
+      ],
+      livre: [
+        "images/livre/livre1.png",
+        "images/livre/livre2.png",
+        "images/livre/livre3.png",
+        "images/livre/livre4.png",
+        "images/livre/livre5.png"
+      ],
+      reservation: [
+        "images/gestion_reservation/reservation1.png",
+        "images/gestion_reservation/reservation2.png",
+        "images/gestion_reservation/reservation3.png",
+        "images/gestion_reservation/reservation4.png",
+        "images/gestion_reservation/reservation5.png"
+      ]
+    };
+
+    const currentIndexes = {
+      formation: 0,
+      location: 0,
+      livre: 0,
+      reservation: 0
+    };
+
+    function updateImage(type) {
+      const imgElement = document.getElementById("img-" + type);
+      imgElement.style.opacity = 0;
+      setTimeout(() => {
+        imgElement.src = imagePaths[type][currentIndexes[type]];
+        imgElement.style.opacity = 1;
+      }, 300);
+    }
+
+    function nextImage(type) {
+      currentIndexes[type] = (currentIndexes[type] + 1) % imagePaths[type].length;
+      updateImage(type);
+    }
+
+    function prevImage(type) {
+      currentIndexes[type] = (currentIndexes[type] - 1 + imagePaths[type].length) % imagePaths[type].length;
+      updateImage(type);
+    }
+  </script>
+
+</body>
+</html>
